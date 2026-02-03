@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌈 Mi Portafolio de Matemáticas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>🌈 ¡Bienvenido a tu Aventura Matemática! 🌟</h1>
+        <p>Aprende jugando con números y formas</p>
+        <h2 align="center">INTEGRANTES:</h2>
+        <h2 align="center">VEGAS VIERA EMANUEL ALEXY</h2>
+        <h2 align="center">NIMA CARMEN JHAN PIER</h2>
+        <h2 align="center">BAYONA GUTIERREZ GINA DEL PILAR</h2>
+    </header>
+
+    <nav class="menu-principal">
+        <a href="index.html" class="btn-nav activo">🏠 Inicio</a>
+        <a href="suma.html" class="btn-nav">➕ Sumas</a>
+        <a href="area.html" class="btn-nav">📐 Áreas</a>
+    </nav>
+
+    <main class="container">
+        <!-- Lección 1: Sumas -->
+        <section class="leccion-card">
+            <div class="leccion-header">
+                <h2>➕ Lección 1: La Magia de las Sumas</h2>
+            </div>
+            <div class="leccion-contenido">
+                <div class="explicacion">
+                    <h3>¿Qué es sumar? 🤔</h3>
+                    <p>Sumar es <strong>juntar cosas</strong>. Si tienes 3 manzanas 🍎🍎🍎 y te dan 2 más 🍎🍎, ¡ahora tienes 5 manzanas!</p>
+                    
+                    <div class="ejemplo-visual">
+                        <div class="ejemplo-box">
+                            <h4>Ejemplo Visual:</h4>
+                            <div class="suma-vertical">
+                                <div class="numero-suma">2 3</div>
+                                <div class="operador">+ 1 5</div>
+                                <div class="linea-suma"></div>
+                                <div class="resultado-suma">3 8</div>
+                            </div>
+                            <p class="explicacion-paso">
+                                <span class="paso">Paso 1:</span> Sumamos primero la columna de la derecha: 3 + 5 = 8<br>
+                                <span class="paso">Paso 2:</span> Luego la columna de la izquierda: 2 + 1 = 3<br>
+                                <span class="paso">Resultado:</span> ¡23 + 15 = 38!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-reto">
+                    <h3>🌟 Mini Reto de Sumas</h3>
+                    <p>¡Resuelve este problema!</p>
+                    <div class="pregunta-reto">
+                        <p class="enunciado">Si tienes 12 canicas y tu amigo te regala 8 más, ¿cuántas canicas tienes ahora?</p>
+                        <input type="number" id="respuesta-suma" class="input-reto" placeholder="Escribe tu respuesta">
+                        <button onclick="validarSuma()" class="btn-validar">Comprobar ✨</button>
+                        <div id="feedback-suma" class="feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lección 2: Áreas -->
+        <section class="leccion-card">
+            <div class="leccion-header">
+                <h2>📐 Lección 2: Explorando las Áreas</h2>
+            </div>
+            <div class="leccion-contenido">
+                <div class="explicacion">
+                    <h3>¿Qué es el área? 🤔</h3>
+                    <p>El área es <strong>cuánto espacio ocupa una figura</strong>. Imagina que quieres pintar una pared, ¡el área te dice cuánta pintura necesitas!</p>
+                    
+                    <div class="ejemplo-visual">
+                        <div class="ejemplo-box">
+                            <h4>Ejemplo: Cuadrado Mágico</h4>
+                            <div class="figura-ejemplo">
+                                <svg width="150" height="150" viewBox="0 0 150 150">
+                                    <rect x="25" y="25" width="100" height="100" fill="#ffeb3b" stroke="#f57c00" stroke-width="3"/>
+                                    <text x="75" y="70" text-anchor="middle" font-size="14" fill="#333">5 cm</text>
+                                    <text x="75" y="140" text-anchor="middle" font-size="14" fill="#333">5 cm</text>
+                                </svg>
+                            </div>
+                            <p class="explicacion-paso">
+                                <span class="paso">Fórmula:</span> Área = lado × lado<br>
+                                <span class="paso">Sustitución:</span> Área = 5 × 5<br>
+                                <span class="paso">Resultado:</span> Área = 25 cm²
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-reto">
+                    <h3>🌟 Mini Reto de Áreas</h3>
+                    <p>¡Calcula el área!</p>
+                    <div class="pregunta-reto">
+                        <p class="enunciado">Un rectángulo tiene 6 cm de largo y 4 cm de ancho. ¿Cuál es su área?</p>
+                        <input type="number" id="respuesta-area" class="input-reto" placeholder="Escribe tu respuesta">
+                        <button onclick="validarArea()" class="btn-validar">Comprobar ✨</button>
+                        <div id="feedback-area" class="feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de exploración -->
+        <section class="exploracion-card">
+            <h2>🚀 ¿Listo para Más Aventuras?</h2>
+            <div class="botones-exploracion">
+                <a href="suma.html" class="btn-explorar">
+                    <span class="icono">➕</span>
+                    <span class="texto">Practicar Sumas</span>
+                </a>
+                <a href="area.html" class="btn-explorar">
+                    <span class="icono">📐</span>
+                    <span class="texto">Calcular Áreas</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>✨ Hecho con amor para pequeños matemáticos ✨</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

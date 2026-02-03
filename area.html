@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📐 Calculadora de Áreas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>📐 Explorador de Áreas Geométricas</h1>
+        <p>Descubre cuánto espacio ocupan las figuras</p>
+    </header>
+
+    <nav class="menu-principal">
+        <a href="index.html" class="btn-nav">🏠 Inicio</a>
+        <a href="suma.html" class="btn-nav">➕ Sumas</a>
+        <a href="area.html" class="btn-nav activo">📐 Áreas</a>
+    </nav>
+
+    <main class="container">
+        <!-- Selector de figura -->
+        <section class="herramienta-card">
+            <h2>🎨 Selecciona una Figura</h2>
+            <div class="selector-figuras">
+                <button onclick="seleccionarFigura('cuadrado')" class="btn-figura" data-figura="cuadrado">
+                    <span class="icono-figura">⬜</span>
+                    <span>Cuadrado</span>
+                </button>
+                <button onclick="seleccionarFigura('rectangulo')" class="btn-figura" data-figura="rectangulo">
+                    <span class="icono-figura">▭</span>
+                    <span>Rectángulo</span>
+                </button>
+                <button onclick="seleccionarFigura('triangulo')" class="btn-figura" data-figura="triangulo">
+                    <span class="icono-figura">△</span>
+                    <span>Triángulo</span>
+                </button>
+                <button onclick="seleccionarFigura('circulo')" class="btn-figura" data-figura="circulo">
+                    <span class="icono-figura">⭕</span>
+                    <span>Círculo</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Cuadrado -->
+        <section id="form-cuadrado" class="formula-card" style="display: none;">
+            <div class="titulo-figura">
+                <h2>⬜ Cuadrado</h2>
+                <p>Un cuadrado tiene 4 lados iguales</p>
+            </div>
+            <div class="visualizacion">
+                <svg width="180" height="180" viewBox="0 0 180 180">
+                    <rect x="40" y="40" width="100" height="100" fill="#ffeb3b" stroke="#f57c00" stroke-width="3"/>
+                    <text x="90" y="85" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">lado</text>
+                </svg>
+            </div>
+            <div class="input-medidas">
+                <label for="lado-cuadrado">Lado del cuadrado (cm)</label>
+                <input type="number" id="lado-cuadrado" placeholder="Ej: 5" class="input-numero">
+            </div>
+            <button onclick="calcularAreaCuadrado()" class="btn-calcular">Calcular Área ✨</button>
+            <div id="resultado-cuadrado" class="resultado-area"></div>
+        </section>
+
+        <!-- Rectángulo -->
+        <section id="form-rectangulo" class="formula-card" style="display: none;">
+            <div class="titulo-figura">
+                <h2>▭ Rectángulo</h2>
+                <p>Un rectángulo tiene 2 lados largos y 2 lados cortos</p>
+            </div>
+            <div class="visualizacion">
+                <svg width="200" height="150" viewBox="0 0 200 150">
+                    <rect x="30" y="40" width="140" height="80" fill="#4caf50" stroke="#2e7d32" stroke-width="3"/>
+                    <text x="100" y="75" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">largo</text>
+                    <text x="180" y="80" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">ancho</text>
+                </svg>
+            </div>
+            <div class="input-medidas">
+                <label for="largo-rectangulo">Largo (cm)</label>
+                <input type="number" id="largo-rectangulo" placeholder="Ej: 8" class="input-numero">
+                <label for="ancho-rectangulo">Ancho (cm)</label>
+                <input type="number" id="ancho-rectangulo" placeholder="Ej: 5" class="input-numero">
+            </div>
+            <button onclick="calcularAreaRectangulo()" class="btn-calcular">Calcular Área ✨</button>
+            <div id="resultado-rectangulo" class="resultado-area"></div>
+        </section>
+
+        <!-- Triángulo -->
+        <section id="form-triangulo" class="formula-card" style="display: none;">
+            <div class="titulo-figura">
+                <h2>△ Triángulo</h2>
+                <p>Un triángulo tiene 3 lados y 3 esquinas</p>
+            </div>
+            <div class="visualizacion">
+                <svg width="180" height="160" viewBox="0 0 180 160">
+                    <polygon points="90,30 30,130 150,130" fill="#e91e63" stroke="#c2185b" stroke-width="3"/>
+                    <text x="90" y="85" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">base</text>
+                    <line x1="90" y1="30" x2="90" y2="130" stroke="#fff" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="105" y="80" font-size="14" fill="#fff" font-weight="bold">altura</text>
+                </svg>
+            </div>
+            <div class="input-medidas">
+                <label for="base-triangulo">Base (cm)</label>
+                <input type="number" id="base-triangulo" placeholder="Ej: 6" class="input-numero">
+                <label for="altura-triangulo">Altura (cm)</label>
+                <input type="number" id="altura-triangulo" placeholder="Ej: 4" class="input-numero">
+            </div>
+            <button onclick="calcularAreaTriangulo()" class="btn-calcular">Calcular Área ✨</button>
+            <div id="resultado-triangulo" class="resultado-area"></div>
+        </section>
+
+        <!-- Círculo -->
+        <section id="form-circulo" class="formula-card" style="display: none;">
+            <div class="titulo-figura">
+                <h2>⭕ Círculo</h2>
+                <p>Un círculo es redondo y perfecto</p>
+            </div>
+            <div class="visualizacion">
+                <svg width="180" height="180" viewBox="0 0 180 180">
+                    <circle cx="90" cy="90" r="60" fill="#9c27b0" stroke="#6a1b9a" stroke-width="3"/>
+                    <line x1="90" y1="90" x2="150" y2="90" stroke="#fff" stroke-width="2"/>
+                    <text x="120" y="85" font-size="16" fill="#fff" font-weight="bold">radio</text>
+                </svg>
+            </div>
+            <div class="input-medidas">
+                <label for="radio-circulo">Radio (cm)</label>
+                <input type="number" id="radio-circulo" placeholder="Ej: 3" class="input-numero">
+            </div>
+            <button onclick="calcularAreaCirculo()" class="btn-calcular">Calcular Área ✨</button>
+            <div id="resultado-circulo" class="resultado-area"></div>
+        </section>
+
+        <!-- Info adicional -->
+        <section class="info-card">
+            <h2>🌟 ¿Sabías qué?</h2>
+            <div class="dato-curioso">
+                <p>El área se mide en <strong>unidades cuadradas</strong> como cm², m² o km²</p>
+            </div>
+            <div class="dato-curioso">
+                <p>El símbolo <strong>²</strong> significa "al cuadrado" o "multiplicado por sí mismo"</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>✨ Hecho con amor para pequeños matemáticos ✨</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

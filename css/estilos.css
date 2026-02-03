@@ -1,0 +1,604 @@
+/* ============================
+   PORTAFOLIO DE MATEMÁTICAS
+   Estilos Playful & Clean
+   ============================ */
+
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7ff 0%, #b3e5fc 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* Navegación */
+.menu-principal {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    background: white;
+    color: #0288d1;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: #0288d1;
+    color: white;
+}
+
+.btn-nav.activo {
+    background: #0288d1;
+    color: white;
+    box-shadow: 0 4px 15px rgba(2, 136, 209, 0.4);
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Tarjetas generales */
+.leccion-card,
+.herramienta-card,
+.formula-card,
+.ejemplos-card,
+.consejos-card,
+.exploracion-card,
+.info-card {
+    background: white;
+    border-radius: 25px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.leccion-card:hover,
+.herramienta-card:hover,
+.formula-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Headers de lecciones */
+.leccion-header h2,
+.herramienta-card h2,
+.formula-card h2 {
+    color: #0288d1;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.instruccion {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Explicaciones */
+.explicacion {
+    background: #f0f9ff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.explicacion h3 {
+    color: #0277bd;
+    margin-bottom: 0.8rem;
+}
+
+/* Ejemplos visuales */
+.ejemplo-visual {
+    margin-top: 1.5rem;
+}
+
+.ejemplo-box {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 3px solid #81d4fa;
+}
+
+.ejemplo-box h4 {
+    color: #0288d1;
+    margin-bottom: 1rem;
+}
+
+/* Suma vertical visual */
+.suma-vertical {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: right;
+    max-width: 150px;
+    margin: 1rem auto;
+    color: #333;
+}
+
+.suma-vertical .numero-suma,
+.suma-vertical .operador {
+    padding: 0.3rem;
+}
+
+.suma-vertical .operador {
+    border-bottom: 3px solid #0288d1;
+}
+
+.suma-vertical .linea-suma {
+    height: 3px;
+    background: #0288d1;
+    margin: 0.2rem 0;
+}
+
+.suma-vertical .resultado-suma {
+    color: #2e7d32;
+    padding: 0.3rem;
+}
+
+/* Explicación paso a paso */
+.explicacion-paso {
+    background: #e3f2fd;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+.paso {
+    background: #0288d1;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Mini retos */
+.mini-reto {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 3px solid #ffb74d;
+}
+
+.mini-reto h3 {
+    color: #f57c00;
+    margin-bottom: 0.8rem;
+}
+
+.pregunta-reto {
+    margin-top: 1rem;
+}
+
+.enunciado {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Inputs */
+.input-reto,
+.input-numero {
+    width: 100%;
+    padding: 0.8rem;
+    border: 3px solid #81d4fa;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-reto:focus,
+.input-numero:focus {
+    outline: none;
+    border-color: #0288d1;
+    box-shadow: 0 0 0 4px rgba(2, 136, 209, 0.1);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.input-box {
+    flex: 1;
+    min-width: 150px;
+}
+
+.input-box label {
+    display: block;
+    color: #0288d1;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.operador-simbolo {
+    font-size: 2.5rem;
+    color: #0288d1;
+    font-weight: bold;
+}
+
+/* Botones */
+.btn-validar,
+.btn-calcular {
+    background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.btn-validar:hover,
+.btn-calcular:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.btn-validar:active,
+.btn-calcular:active {
+    transform: translateY(0);
+}
+
+/* Feedback */
+.feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+}
+
+.feedback.correcto {
+    background: #c8e6c9;
+    color: #2e7d32;
+    border: 3px solid #4caf50;
+    display: block;
+}
+
+.feedback.incorrecto {
+    background: #ffcdd2;
+    color: #c62828;
+    border: 3px solid #f44336;
+    display: block;
+}
+
+/* Explicación de pasos (suma) */
+.explicacion-pasos {
+    margin-top: 2rem;
+    background: #f0f9ff;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.explicacion-pasos h3 {
+    color: #0277bd;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.paso-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.numero-paso {
+    background: linear-gradient(135deg, #0288d1 0%, #0277bd 100%);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(2, 136, 209, 0.3);
+}
+
+.contenido-paso {
+    flex: 1;
+}
+
+.contenido-paso h4 {
+    color: #0288d1;
+    margin-bottom: 0.8rem;
+}
+
+.suma-alineada {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 3px solid #81d4fa;
+    margin-top: 1rem;
+}
+
+.proceso-detallado {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border: 3px solid #81d4fa;
+}
+
+.columna-calculo {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #e3f2fd;
+    border-radius: 10px;
+}
+
+.resultado-final {
+    background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e7d32;
+    border: 3px solid #4caf50;
+    margin-top: 1rem;
+}
+
+/* Ejemplos para practicar */
+.ejemplos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ejemplo-mini {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid #81d4fa;
+}
+
+.ejemplo-mini:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(2, 136, 209, 0.3);
+    border-color: #0288d1;
+}
+
+.ejemplo-mini p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0277bd;
+    margin-bottom: 0.5rem;
+}
+
+.ver-ejemplo {
+    color: #0288d1;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Consejos */
+.consejos-card h2,
+.info-card h2 {
+    color: #f57c00;
+    margin-bottom: 1.5rem;
+}
+
+.consejo-item,
+.dato-curioso {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background: #fff3e0;
+    padding: 1rem;
+    border-radius: 15px;
+    border-left: 5px solid #ffb74d;
+}
+
+.icono-consejo {
+    font-size: 1.5rem;
+}
+
+/* Selector de figuras */
+.selector-figuras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-figura {
+    background: white;
+    border: 3px solid #81d4fa;
+    border-radius: 20px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0277bd;
+}
+
+.btn-figura:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(2, 136, 209, 0.3);
+    border-color: #0288d1;
+}
+
+.btn-figura.activo {
+    background: linear-gradient(135deg, #0288d1 0%, #0277bd 100%);
+    color: white;
+    border-color: #0277bd;
+}
+
+.icono-figura {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Título de figura */
+.titulo-figura {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.titulo-figura h2 {
+    color: #0288d1;
+    font-size: 2rem;
+}
+
+.titulo-figura p {
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Visualización de figuras */
+.visualizacion {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* Resultados de área */
+.resultado-area {
+    margin-top: 2rem;
+    display: none;
+}
+
+.resultado-area.mostrar {
+    display: block;
+}
+
+/* Exploración */
+.botones-exploracion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.btn-explorar {
+    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(156, 39, 176, 0.3);
+}
+
+.btn-explorar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(156, 39, 176, 0.4);
+}
+
+.btn-explorar .icono {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-explorar .texto {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .operador-simbolo {
+        font-size: 2rem;
+    }
+
+    .suma-vertical {
+        font-size: 1.5rem;
+    }
+
+    .resultado-final {
+        font-size: 1.5rem;
+    }
+}

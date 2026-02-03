@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>➕ Práctica de Sumas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>➕ Laboratorio de Sumas Mágicas</h1>
+        <p>Aprende a sumar como un experto</p>
+    </header>
+
+    <nav class="menu-principal">
+        <a href="index.html" class="btn-nav">🏠 Inicio</a>
+        <a href="suma.html" class="btn-nav activo">➕ Sumas</a>
+        <a href="area.html" class="btn-nav">📐 Áreas</a>
+    </nav>
+
+    <main class="container">
+        <section class="herramienta-card">
+            <h2>🎯 Sumador Interactivo</h2>
+            <p class="instruccion">Ingresa dos números y observa cómo se suman paso a paso</p>
+
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="num1-suma">Primer Número</label>
+                    <input type="number" id="num1-suma" placeholder="Ej: 45" class="input-numero">
+                </div>
+                <div class="operador-simbolo">➕</div>
+                <div class="input-box">
+                    <label for="num2-suma">Segundo Número</label>
+                    <input type="number" id="num2-suma" placeholder="Ej: 27" class="input-numero">
+                </div>
+            </div>
+
+            <button onclick="calcularSuma()" class="btn-calcular">Calcular Suma ✨</button>
+
+            <!-- Explicación paso a paso -->
+            <div id="explicacion-suma" class="explicacion-pasos" style="display: none;">
+                <h3>📚 Procedimiento Paso a Paso</h3>
+                
+                <div class="paso-item">
+                    <span class="numero-paso">1</span>
+                    <div class="contenido-paso">
+                        <h4>Alineamos los números en columnas</h4>
+                        <p>Es importante poner las unidades debajo de las unidades, las decenas debajo de las decenas, etc.</p>
+                        <div id="alineacion-visual" class="suma-alineada"></div>
+                    </div>
+                </div>
+
+                <div class="paso-item">
+                    <span class="numero-paso">2</span>
+                    <div class="contenido-paso">
+                        <h4>Sumamos de derecha a izquierda</h4>
+                        <div id="proceso-suma" class="proceso-detallado"></div>
+                    </div>
+                </div>
+
+                <div class="paso-item">
+                    <span class="numero-paso">3</span>
+                    <div class="contenido-paso">
+                        <h4>¡Resultado Final! 🎉</h4>
+                        <div id="resultado-suma-final" class="resultado-final"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ejemplos adicionales -->
+        <section class="ejemplos-card">
+            <h2>💡 Ejemplos para Practicar</h2>
+            <div class="ejemplos-grid">
+                <div class="ejemplo-mini" onclick="cargarEjemplo(12, 8)">
+                    <p>12 + 8</p>
+                    <span class="ver-ejemplo">Ver solución →</span>
+                </div>
+                <div class="ejemplo-mini" onclick="cargarEjemplo(35, 47)">
+                    <p>35 + 47</p>
+                    <span class="ver-ejemplo">Ver solución →</span>
+                </div>
+                <div class="ejemplo-mini" onclick="cargarEjemplo(123, 89)">
+                    <p>123 + 89</p>
+                    <span class="ver-ejemplo">Ver solución →</span>
+                </div>
+                <div class="ejemplo-mini" onclick="cargarEjemplo(256, 178)">
+                    <p>256 + 178</p>
+                    <span class="ver-ejemplo">Ver solución →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="consejos-card">
+            <h2>🌟 Consejos de Oro</h2>
+            <div class="consejo-item">
+                <span class="icono-consejo">👉</span>
+                <p>Siempre empieza sumando desde la columna de la <strong>derecha</strong> (unidades)</p>
+            </div>
+            <div class="consejo-item">
+                <span class="icono-consejo">👉</span>
+                <p>Si la suma de una columna es mayor que 9, <strong>llevamos</strong> un número a la siguiente columna</p>
+            </div>
+            <div class="consejo-item">
+                <span class="icono-consejo">👉</span>
+                <p>Mantén los números bien <strong>alineados</strong> para no confundirte</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>✨ Hecho con amor para pequeños matemáticos ✨</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
